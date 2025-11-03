@@ -1,0 +1,449 @@
+{
+	"compiler": {
+		"version": "0.6.0+commit.26b70077"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "cloudPenalty",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "clientServiceFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duringTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "n",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ret",
+						"type": "string"
+					}
+				],
+				"name": "ClientTerminate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ret",
+						"type": "string"
+					}
+				],
+				"name": "CloudArbitrate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ret",
+						"type": "string"
+					}
+				],
+				"name": "CloudInit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ret",
+						"type": "string"
+					}
+				],
+				"name": "CloudTerminate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "from",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Received",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ret",
+						"type": "string"
+					}
+				],
+				"name": "RequestService",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userid",
+						"type": "string"
+					}
+				],
+				"name": "clientTerminate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "s2",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hashOfS1",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "setNum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "newResult",
+						"type": "bytes32"
+					}
+				],
+				"name": "cloudArbitrate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "verifyResult",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "cloudInit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userid",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "paySeed",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "setNum",
+						"type": "uint256"
+					}
+				],
+				"name": "cloudTerminate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "ecrecovery",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBasicInfos",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "cloud",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cloudPenalty",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "clientServiceFee",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDetailsInfos",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "serviceName",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "verifyResult",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duringTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "randomBlock",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRandomBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "getVerifyResult",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "setSeq",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "payNum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "payHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "requestService",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "stateMap",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_client",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_payNum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_payHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "int256",
+						"name": "_serviceStatus",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_requestStartTime",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"getBasicInfos()": {
+					"details": "Function to get details of project"
+				},
+				"requestService(string,uint8[],uint256,bytes32)": {
+					"details": "Client requests the service     "
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {
+				"clientTerminate(string)": {
+					"notice": "Client terminates the service if cloud does not terminate service in time."
+				},
+				"cloudArbitrate(string,string,bytes32,bytes,uint256,bytes32)": {
+					"notice": "client provide payment seed and transfer the service fees     "
+				},
+				"cloudInit(bytes32[])": {
+					"notice": "cloud publishes the verify result and transfer penatly     "
+				},
+				"cloudTerminate(string,bytes32,uint256)": {
+					"notice": "client provide payment seed and transfer the service fees     "
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multi-user.sol": "Launchpad"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multi-user.sol": {
+			"keccak256": "0x07aa60a59a419a0dedf525f834d63db2000185aeb3f682ec8a01437479ece5b1",
+			"urls": [
+				"bzz-raw://36c75f54a5e4b173d0b9edc5dfebaf6032c76c0e8e38836e257bca1d7ce92e83",
+				"dweb:/ipfs/QmVTnMrMpSNE7DRhtD3xcwXprzHYNQnhFthnKsyX4pjn3o"
+			]
+		}
+	},
+	"version": 1
+}
