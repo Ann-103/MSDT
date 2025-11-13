@@ -1,25 +1,25 @@
 # MSDT: Blockchain-Based Multi-Subset Data Trading Protocol Enabled Data Availability and Non-repudiation
 
-## 论文性能测试
+## Paper Performance Testing
 
-通过在本地搭建私有以太坊区块链来测试论文中设计的智能合约的gas开销
+Testing the gas costs of smart contracts designed in the paper by setting up a private Ethereum blockchain locally.
 
-### 安装依赖
+### Install dependencies
 
-运行 `pip install -r requirements.txt` 安装所需的python库
+Run `pip install -r requirements.txt` to install the required Python libraries.
 
-### 搭建私有链
+### Build a private blockchain
 
-在本地搭建一条以太坊私有链，可以使用truffle的ganache组件快速完成
+To set up a private Ethereum blockchain locally, you can use Truffle's Ganache component to accomplish this quickly.
 
-### 创建账户
+### Create Account
 
-创建两个区块链账户并保证账户中余额充足
+Create two blockchain accounts and ensure sufficient funds in each account.
 
-## 链上gas开销测试
+## On-Chain Gas Cost Testing
 
-将两个账户地址以及私钥写入 `MSDT\single\wallet\client.json`和 `MSDT\single\wallet\cloud.json`
+Write the two account addresses and private keys to `MSDT\single\wallet\client.json` and `MSDT\single\wallet\cloud.json`.
 
-将本地节点rpc地址写入 `MSDT\single\wallet\rpc.json`
+Write the local node RPC address to `MSDT\single\wallet\rpc.json`.
 
-启用私有区块链后，进入single目录，运行 `python gas_test.py`完成合约的gas开销测试
+After enabling the private blockchain, navigate to the single directory and run `python gas_test.py` to complete the contract gas cost test.
